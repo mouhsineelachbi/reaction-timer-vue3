@@ -1,5 +1,6 @@
 <template>
   <h1>Mythose Reaction Timer</h1>  
+  <button>Play</button>
 </template>
 
 <script>
