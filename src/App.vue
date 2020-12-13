@@ -2,17 +2,19 @@
   <h1>Mythose Reaction Timer</h1>  
   <button @click="start" :disabled="isPlaying">Play</button>
   <Block v-if="isPlaying" :delay="delay" @end="endGame"/>
-  <p v-if="showResult"> Reaction Time {{ score }} ms</p>
+  <!--<p v-if="showResult"> Reaction Time {{ score }} ms</p>-->
+  <Result v-if="showResult" :score="this.score" />
 </template>
 
 <script>
 // Imports
 import Block from './components/Block.vue'
+import Result from './components/Result.vue'
 
 
 export default {
   name: 'App',
-  components: { Block },
+  components: { Block, Result },
   data(){
     return {
       isPlaying: false,
