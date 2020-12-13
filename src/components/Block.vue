@@ -24,7 +24,7 @@ export default {
         },
         stopTimer () {
             clearInterval(this.timer);
-            console.log(this.reactTime);
+            this.$emit('end', this.reactTime);
         }
     }
 
